@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/elephant/src",
+  "monorepo": true,
+  "root": "apps/elephant",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/elephant/tsconfig.app.json"
+  },
+  "projects": {
+    "elephant": {
+      "type": "application",
+      "root": "apps/elephant",
+      "entryFile": "main",
+      "sourceRoot": "apps/elephant/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/elephant/tsconfig.app.json"
+      }
+    },
+    "rss-feed": {
+      "type": "application",
+      "root": "apps/rss-feed",
+      "entryFile": "main",
+      "sourceRoot": "apps/rss-feed/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/rss-feed/tsconfig.app.json"
+      }
+    },
+    "rss-rule": {
+      "type": "application",
+      "root": "apps/rss-rule",
+      "entryFile": "main",
+      "sourceRoot": "apps/rss-rule/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/rss-rule/tsconfig.app.json"
+      }
+    }
+  }
+}
