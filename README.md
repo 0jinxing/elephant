@@ -4,9 +4,9 @@
   </a>
 </p>
 
-<h1 align="center">Elephant</h1>
+<h1 align="center">ELEPHANT</h1>
 
-<p align="center">rss feed, 兼容 <code>RSS Hub</code></p>
+<p align="center"><i>RSS Feed</i>, 兼容 <code>RSS Hub</code></p>
 
 <div align="center">
   <a href="https://github.com/0jinxing/elephant/issues">

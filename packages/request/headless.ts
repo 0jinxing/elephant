@@ -1,9 +1,10 @@
 import puppeteer from 'puppeteer-extra';
 import stealth from 'puppeteer-extra-plugin-stealth';
+import env from '@elephant/env';
 
 puppeteer.use(stealth());
 
-const options = {
+const options: Parameters<typeof puppeteer.launch>[0] = {
   args: [
     '--no-sandbox',
     '--disable-setuid-sandbox',
@@ -11,14 +12,14 @@ const options = {
     '--window-position=0,0',
     '--ignore-certificate-errors',
     '--ignore-certificate-errors-spki-list',
-    `--user-agent=${config.ua}`,
+    `--user-agent=${env.request.ua}`,
   ],
   headless: true,
   ignoreHTTPSErrors: true,
 };
 
-export async function request(url: string) {
-  const browser = await puppeteer.launch({});
+export async function headless(url: string) {
+  const browser = await puppeteer.launch(options);
 
   try {
     const page = await browser.newPage();
@@ -29,3 +30,5 @@ export async function request(url: string) {
     browser.close();
   }
 }
+
+export default headless;

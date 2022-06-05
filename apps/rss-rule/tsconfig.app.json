@@ -4,6 +4,6 @@
     "declaration": false,
     "outDir": "../../dist/apps/rss-rule"
   },
-  "include": ["src/**/*"],
+  "include": ["./**/*"],
   "exclude": ["node_modules", "dist", "test", "**/*spec.ts"]
 }
